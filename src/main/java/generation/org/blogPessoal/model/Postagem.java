@@ -14,14 +14,13 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.Size;
 
 
-
 import com.sun.istack.NotNull;
 
 @Entity
 @Table(name = "postagem")
 public class Postagem {
 	
-	@Id
+	@Id	
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
@@ -34,8 +33,10 @@ public class Postagem {
 	private String texto;
 	
 
-	@Temporal(TemporalType.TIMESTAMP) 
+	@Temporal(TemporalType.TIMESTAMP)
     private Date data = new java.sql.Date(System.currentTimeMillis());
+	
+	
 
 	public long getId() {
 		return id;
